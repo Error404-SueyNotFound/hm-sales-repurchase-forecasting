@@ -1,0 +1,5 @@
+# Versions used for the verified run; install in the project virtual environment.
+numpy==2.5.4
+pandas==3.1.1
+statsmodels==0.15.0
+matplotlib==3.11.2
