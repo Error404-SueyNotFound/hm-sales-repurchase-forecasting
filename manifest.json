@@ -9,8 +9,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6837,
-      "sha256": "baea0ac9b0db9aa3934ed8ac842fb02400b78a0a1923c94a8ffc3f6f1cbafb9b"
+      "bytes": 6771,
+      "sha256": "dc348fda615948ef45f3f8bcb28562eab3b75a4848f9ba584375f1f8bd62d4a4"
     },
     {
       "path": "code/01_data_quality.sql",
@@ -264,8 +264,8 @@
     },
     {
       "path": "reporting/package_project.py",
-      "bytes": 8793,
-      "sha256": "56efbe694a8768b8273df5b82bddb0bdca5e7e7a063b1d14e66958476a5786a4"
+      "bytes": 8844,
+      "sha256": "ace4a5e50d992e10d4255b4c5c4a81404c18ef87b3ba81a9c5b508f9cb0dcca6"
     },
     {
       "path": "reports/HM_Project_Report_EN.md",
@@ -396,11 +396,6 @@
       "path": "reports/sql_analysis_findings.md",
       "bytes": 18864,
       "sha256": "2b436b087a12c27c8ead15546b60809acc96fe3eab50ba541501dccab1df99a0"
-    },
-    {
-      "path": "reports/简历与面试准备.md",
-      "bytes": 5632,
-      "sha256": "bfca73407b7bfa7ad5ce93cc1edf5add57ecf4da82e65e1e2885e9e84bafff9c"
     },
     {
       "path": "reports/结果文件索引.md",

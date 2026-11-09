@@ -13,7 +13,6 @@
 - [SQL逐表分析与限制](reports/sql_analysis_findings.md)
 - [Python回测逐项分析](reports/python_analysis_findings.md)
 - [结果文件索引与字段](reports/结果文件索引.md)
-- [简历表述与面试准备](reports/简历与面试准备.md)
 
 ![月度销售趋势](reports/figures/01_monthly_sales.png)
 
