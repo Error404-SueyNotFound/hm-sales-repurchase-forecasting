@@ -269,23 +269,23 @@
     },
     {
       "path": "reports/HM_Project_Report_EN.md",
-      "bytes": 19762,
-      "sha256": "e6ab03615b9ef6f8b430a75fc49bfb72024e8b1fb7fae2c69f0992ef64c77648"
+      "bytes": 17529,
+      "sha256": "7308cc6e8b66b4c8609768302bbcf30201ae069627d4530139ff95e3e75fe42f"
     },
     {
       "path": "reports/HM_Project_Report_EN.pdf",
-      "bytes": 1039941,
-      "sha256": "201aac3d217ee8a4a14de43956c121c9f46b2b41dca5ef8b29f627be8b2ccebb"
+      "bytes": 1038515,
+      "sha256": "6ad8c811cf39893665b6bb0d9061dd0e7df239fe68583b2bef04c6a92b1330b8"
     },
     {
       "path": "reports/HM_完整项目报告.md",
-      "bytes": 16120,
-      "sha256": "58541a7459aedabe42653a7fad7ee6187352b1650cf79c730bd2ef7b97dee8ef"
+      "bytes": 14474,
+      "sha256": "ccf900f54e1f6cc349bfe4ff9602f2a0d1bc7935f4881f4ba0ee90c06735ebe3"
     },
     {
       "path": "reports/HM_完整项目报告.pdf",
-      "bytes": 1360068,
-      "sha256": "8fd747e7cce8570dd859998e77a478891e8b1489c34436e96539c6bcb45b2ca4"
+      "bytes": 1342620,
+      "sha256": "d62053703f8103e4a8f886c71198a1c43b9697ba799f59541dbf83e470f0d53c"
     },
     {
       "path": "reports/figures/01_monthly_sales.png",
@@ -384,13 +384,13 @@
     },
     {
       "path": "reports/report_structure.json",
-      "bytes": 24678,
-      "sha256": "642f66230e643b5371a4e0e07793f3a0a0f85a97964ec520ffedb307c17a054f"
+      "bytes": 22930,
+      "sha256": "782a082d7e42b6e0c621ba0ecb7c7bced3cb80e4e41f5af6304e4b021898ae93"
     },
     {
       "path": "reports/report_structure_en.json",
-      "bytes": 28144,
-      "sha256": "c3accaede4451445a7bbde39e60eccfeabbaaf4def1d364725bb097367f8459f"
+      "bytes": 25815,
+      "sha256": "1d48d2867a3bf10b82b988bf9eb7af6230a4052bb9e10cd5910959de66df0af8"
     },
     {
       "path": "reports/sql_analysis_findings.md",
