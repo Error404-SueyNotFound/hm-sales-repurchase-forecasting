@@ -1,0 +1,62 @@
+输入：734天，31,788,324件。输出：/Users/hamina/Desktop/SQL/H&M/forecasting/results/run_02
+validation fold=1 SeasonalNaive7: completed
+validation fold=1 WeekdayMean4: completed
+validation fold=1 ARMA11: completed
+validation fold=1 ARIMA111: completed
+validation fold=1 SARIMA111_011_7: completed
+validation fold=1 HoltWinters7: completed
+validation fold=2 SeasonalNaive7: completed
+validation fold=2 WeekdayMean4: completed
+validation fold=2 ARMA11: completed
+validation fold=2 ARIMA111: completed
+validation fold=2 SARIMA111_011_7: completed
+validation fold=2 HoltWinters7: completed
+validation fold=3 SeasonalNaive7: completed
+validation fold=3 WeekdayMean4: completed
+validation fold=3 ARMA11: completed
+validation fold=3 ARIMA111: completed
+validation fold=3 SARIMA111_011_7: completed
+validation fold=3 HoltWinters7: completed
+validation fold=4 SeasonalNaive7: completed
+validation fold=4 WeekdayMean4: completed
+validation fold=4 ARMA11: completed
+validation fold=4 ARIMA111: completed
+validation fold=4 SARIMA111_011_7: completed
+validation fold=4 HoltWinters7: completed
+validation fold=5 SeasonalNaive7: completed
+validation fold=5 WeekdayMean4: completed
+validation fold=5 ARMA11: completed
+validation fold=5 ARIMA111: completed
+validation fold=5 SARIMA111_011_7: completed
+validation fold=5 HoltWinters7: completed
+验证集选中：ARMA11。开始固定测试期评估。
+test fold=1 SeasonalNaive7: completed
+test fold=1 WeekdayMean4: completed
+test fold=1 ARMA11: completed
+test fold=1 ARIMA111: completed
+test fold=1 SARIMA111_011_7: completed
+test fold=1 HoltWinters7: completed
+
+验证集表现：
+          model  completed_folds  mean_MAE  sd_MAE  mean_RMSE  mean_WAPE_pct  mean_MASE7  eligible_for_selection  folds_beating_baseline  worst_fold_MAE  best_fold_MAE
+         ARMA11                5  10768.91 5637.27   15679.01          22.83        0.91                    True                       3        18896.77        4449.14
+   WeekdayMean4                5  12772.19 4303.44   17691.84          27.39        1.08                    True                       4        17199.14        6774.64
+       ARIMA111                5  13509.56 3832.16   18843.15          29.19        1.14                    True                       3        17809.47        9993.31
+SARIMA111_011_7                5  13632.07 4900.95   18731.81          29.51        1.15                    True                       3        20466.32        9434.04
+   HoltWinters7                5  16372.04 5528.78   20198.99          35.86        1.38                    True                       4        24174.72        8558.94
+ SeasonalNaive7                5  17683.24 8355.04   21128.82          38.80        1.49                    True                       0        30593.71        7177.46
+
+最终测试表现：
+phase  fold           model  train_end forecast_start forecast_end     MAE         MSE    RMSE  WAPE_pct  MASE7  bias_pct  selected_on_validation  MAE_improvement_vs_baseline_pct
+ test     1 SARIMA111_011_7 2020-08-25     2020-08-26   2020-09-22 3823.29 27368397.56 5231.48     10.26   0.33      7.76                   False                            25.66
+ test     1    HoltWinters7 2020-08-25     2020-08-26   2020-09-22 3875.46 27023636.12 5198.43     10.40   0.33      7.11                   False                            24.65
+ test     1        ARIMA111 2020-08-25     2020-08-26   2020-09-22 4254.99 33866849.89 5819.52     11.42   0.36      8.97                   False                            17.27
+ test     1  SeasonalNaive7 2020-08-25     2020-08-26   2020-09-22 5143.29 37119033.36 6092.54     13.80   0.44     -1.61                   False                             0.00
+ test     1    WeekdayMean4 2020-08-25     2020-08-26   2020-09-22 6414.73 76531027.33 8748.20     17.21   0.55      8.35                   False                           -24.72
+ test     1          ARMA11 2020-08-25     2020-08-26   2020-09-22 6453.82 61405426.07 7836.16     17.32   0.55     15.87                    True                           -25.48
+
+与run_01匹配36组模型/轮次结果，MAE最大绝对差为0.0000000000件。
+
+分析报告： /Users/hamina/Desktop/SQL/H&M/reports/python_analysis_findings.md
+
+全部完成。结果保存在： /Users/hamina/Desktop/SQL/H&M/forecasting/results/run_02

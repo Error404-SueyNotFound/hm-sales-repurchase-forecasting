@@ -1,0 +1,16 @@
+{
+  "selected_model": "ARMA11",
+  "selection_metric": "mean validation MAE",
+  "horizon": 28,
+  "validation_folds": 5,
+  "input_start": "2018-09-20",
+  "final_train_end": "2020-08-25",
+  "test_start": "2020-08-26",
+  "test_end": "2020-09-22",
+  "python_version": "3.13.13",
+  "pandas_version": "3.1.1",
+  "numpy_version": "2.5.4",
+  "statsmodels_version": "0.15.0",
+  "input_sha256": "0fec12e2fd0e26b3cb51ea40ba2c4d68d435afa87b0fe46f9784768decac9d40",
+  "note": "Fixed initial model orders; reproduction of an already viewed holdout, not a new blind test."
+}

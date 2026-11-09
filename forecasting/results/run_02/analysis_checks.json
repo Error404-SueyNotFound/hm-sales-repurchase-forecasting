@@ -1,0 +1,10 @@
+{
+  "prediction_rows": 1008,
+  "model_fold_results": 36,
+  "input_days": 734,
+  "input_units": 31788324,
+  "actuals_match_input": true,
+  "recomputed_metrics_match": true,
+  "issues": 0,
+  "reproduction": "与run_01匹配36组模型/轮次结果，MAE最大绝对差为0.0000000000件。"
+}
