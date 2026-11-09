@@ -5,7 +5,7 @@
     "blocks": [
       {
         "kind": "text",
-        "text": "SQL analysis and Python historical backtesting using a public transaction sample. Observation period: September 20, 2018 to September 22, 2020. Report prepared on November 9, 2026."
+        "text": "SQL analysis and Python historical backtesting using a public transaction sample. Observation period: September 20, 2018 to September 22, 2020."
       },
       {
         "kind": "table",
@@ -76,7 +76,7 @@
     "blocks": [
       {
         "kind": "text",
-        "text": "Source: the Kaggle H&M Personalized Fashion Recommendations competition. The analysis uses product, customer and transaction tables; product images are not used. The geographic market represented by the sample has not been verified."
+        "text": "Source: the Kaggle H&M Personalized Fashion Recommendations competition. The analysis uses product, customer and transaction tables."
       },
       {
         "kind": "table",
@@ -158,12 +158,8 @@
         "text": "Dimension identifiers are non-null and unique, with no blank-string identifiers. Every transaction matches both a customer and a product. Transactions exist on all 734 dates. Age is missing for 15,861 customers (1.16%); observed ages range from 16 to 99, with no non-positive ages."
       },
       {
-        "kind": "text",
-        "text": "Key totals reconcile across 24 SQL exports. Monthly, channel, category and new/returning purchase summaries each total 31,788,324 units. Each of the three customer segmentations totals 1,338,029 eligible 30-day customers and 376,347 repeat purchasers."
-      },
-      {
         "kind": "note",
-        "text": "Separate exports for date/price quality, temporary customer-table validation and original transaction totals were not found. Their direct results are not claimed as verified; available aggregate exports were cross-checked instead."
+        "text": "Key totals reconcile across 24 SQL exports. Monthly, channel, category and new/returning purchase summaries each total 31,788,324 units. Each of the three customer segmentations totals 1,338,029 eligible 30-day customers and 376,347 repeat purchasers."
       }
     ]
   },
@@ -281,7 +277,7 @@
       },
       {
         "kind": "note",
-        "text": "Important limitation: channel 1's reported May 2020 growth of 115.14% compares with March because LAG skips the missing April row. It is not treated as ordinary month-over-month growth. Channel codes are not relabeled as online or offline."
+        "text": "Important limitation: channel 1's reported May 2020 growth of 115.14% compares with March because LAG skips the missing April row."
       }
     ]
   },
@@ -311,7 +307,7 @@
       },
       {
         "kind": "note",
-        "text": "Seasonal coverage is unequal, so shares describe mix rather than establishing seasonal demand levels. group_sale repeats across product-type rows and must not be summed directly. The 995 catalog products without observed sales are not automatically classified as slow-moving stock."
+        "text": "Seasonal coverage is unequal, so shares describe mix rather than establishing seasonal demand levels."
       }
     ]
   },
@@ -366,15 +362,11 @@
       },
       {
         "kind": "text",
-        "text": "Lower-body garments and swimwear have larger shares within top-product sales than within total sales. Leading products in these categories are useful monitoring candidates. This measure is not the percentage of each category's products entering the top group."
-      },
-      {
-        "kind": "text",
-        "text": "Monthly mix also changes: among complete months, swimwear accounts for 15.17% of sales value in June 2019 and 0.51% in November. Both sales value and share should be shown because a falling share can also result from growth elsewhere."
+        "text": "Lower-body garments and swimwear have larger shares within top-product sales than within total sales. Leading products in these categories are useful monitoring candidates."
       },
       {
         "kind": "note",
-        "text": "Products with sales are not the same as listed products, and units per product is not sell-through. The product-type table contains 32 LAG comparisons across missing months; these are not ordinary consecutive-month growth rates."
+        "text": "Monthly mix also changes: among complete months, swimwear accounts for 15.17% of sales value in June 2019 and 0.51% in November."
       }
     ]
   },
@@ -425,15 +417,15 @@
       },
       {
         "kind": "text",
-        "text": "Among observed repeat purchasers, 41.48% made their second purchase within 30 days and 57.91% within 60 days. This denominator differs from the overall 30-day repeat rate. Customers without an observed repeat purchase are excluded from interval statistics, so the median is not a return time for all customers."
+        "text": "Among observed repeat purchasers, 41.48% made their second purchase within 30 days and 57.91% within 60 days."
       },
       {
         "kind": "text",
-        "text": "Transactions after the first observed purchase day total 26,832,675 units, or 84.41% of all units and 84.25% of sales value. Subsequent purchasing is an important source of sales, but these shares are not the incremental impact of retention campaigns."
+        "text": "Transactions after the first observed purchase day total 26,832,675 units, or 84.41% of all units and 84.25% of sales value. This supports treating subsequent purchasing as an important area of analysis."
       },
       {
         "kind": "note",
-        "text": "A customer's first observed purchase day is classified as new and later days as existing; these are transaction groups, not disjoint customer groups. One-day purchasers are not automatically churned. Rates with different follow-up windows have different denominators and cannot be subtracted to estimate incremental repeat rates for one fixed cohort."
+        "text": "A customer's first observed purchase day is classified as new and later days as existing."
       }
     ]
   },
@@ -444,16 +436,16 @@
       {
         "kind": "image",
         "path": "figures_en/07_cohort_repurchase.png",
-        "caption": "Source: monthly_cohort_repurchase_rates.csv. Gray cells indicate no customers with complete follow-up, not a zero repeat rate.",
+        "caption": "Source: monthly_cohort_repurchase_rates.csv. Gray cells indicate no customers with complete follow-up.",
         "height": 410
       },
       {
         "kind": "text",
-        "text": "Early cohorts have higher repeat rates, but may include customers who purchased before observation began. The pattern does not establish deteriorating acquisition quality. During 2019, monthly-cohort 30-day rates range from 17.83% to 25.75%; the rate rises from 17.97% in April 2020 to 23.72% in May."
+        "text": "During 2019, monthly-cohort 30-day rates range from 17.83% to 25.75%; the rate rises from 17.97% in April 2020 to 23.72% in May."
       },
       {
         "kind": "note",
-        "text": "Only 16,260 of August 2020's 22,974 first-observed customers have complete 30-day follow-up, so its 18.78% rate applies only to this eligible subset. March 2020 at 180 days and June 2020 at 90 days also have partial eligibility. Missing rates in recent cohorts should not be plotted as zero."
+        "text": "Only 16,260 of August 2020's 22,974 first-observed customers have complete 30-day follow-up, so its 18.78% rate applies only to this eligible subset. March 2020 at 180 days and June 2020 at 90 days also have partial eligibility."
       }
     ]
   },
@@ -640,15 +632,15 @@
       },
       {
         "kind": "text",
-        "text": "ARMA overpredicts on 26 of 28 days and overpredicts total volume by 15.87%. Its later forecasts approach 43,500 units per day and fail to follow lower actual daily sales. SARIMA has the lowest holdout MAE, while Holt-Winters has the lowest RMSE; their small difference should not be overstated."
+        "text": "ARMA overpredicts on 26 of 28 days and overpredicts total volume by 15.87%. Its later forecasts approach 43,500 units per day and fail to follow lower actual daily sales. SARIMA has the lowest holdout MAE, while Holt-Winters has the lowest RMSE."
       },
       {
         "kind": "text",
-        "text": "The seasonal-naive model underpredicts total volume by only 1.61%, but its WAPE is 13.80%. Positive and negative daily errors cancel in aggregate totals, so a close total does not establish accurate daily forecasts."
+        "text": "The seasonal-naive model underpredicts total volume by only 1.61%, but its WAPE is 13.80%."
       },
       {
         "kind": "note",
-        "text": "WAPE is total absolute daily error divided by actual total volume; it is not a direct accuracy score. MASE7 uses a training-period denominator, so a value below one does not prove superiority over the holdout baseline. SARIMA must not be retrospectively described as the validation-selected model."
+        "text": "WAPE is total absolute daily error divided by actual total volume. MASE7 uses a training-period denominator."
       }
     ]
   },

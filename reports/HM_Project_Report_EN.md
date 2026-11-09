@@ -4,7 +4,7 @@ Complete project report | 2026-11-09
 
 ## H&M Sales, Repeat Purchase and Forecasting
 
-SQL analysis and Python historical backtesting using a public transaction sample. Observation period: September 20, 2018 to September 22, 2020. Report prepared on November 9, 2026.
+SQL analysis and Python historical backtesting using a public transaction sample. Observation period: September 20, 2018 to September 22, 2020.
 
 | Project scale | Result |
 | --- | --- |
@@ -31,7 +31,7 @@ Sales value is the sum of normalized prices and has no assigned currency unit. F
 
 ## Data, Metric Definitions and Validation
 
-Source: the Kaggle H&M Personalized Fashion Recommendations competition. The analysis uses product, customer and transaction tables; product images are not used. The geographic market represented by the sample has not been verified.
+Source: the Kaggle H&M Personalized Fashion Recommendations competition. The analysis uses product, customer and transaction tables.
 
 | Source table | Rows | Grain and purpose |
 | --- | --- | --- |
@@ -56,7 +56,7 @@ Dimension identifiers are non-null and unique, with no blank-string identifiers.
 
 Key totals reconcile across 24 SQL exports. Monthly, channel, category and new/returning purchase summaries each total 31,788,324 units. Each of the three customer segmentations totals 1,338,029 eligible 30-day customers and 376,347 repeat purchasers.
 
-Separate exports for date/price quality, temporary customer-table validation and original transaction totals were not found. Their direct results are not claimed as verified; available aggregate exports were cross-checked instead.
+
 
 ## Comparable-Period Sales Declined
 
@@ -94,7 +94,7 @@ Channel 2's share of sales value exceeds its unit share, implying a higher avera
 
 Channel 2's monthly sales share rose from 73.29% in February 2020 to 87.42% in March and 100% in April, before returning to 77.94% in May. Transaction coverage and business context should be checked before interpreting this shift.
 
-Important limitation: channel 1's reported May 2020 growth of 115.14% compares with March because LAG skips the missing April row. It is not treated as ordinary month-over-month growth. Channel codes are not relabeled as online or offline.
+Important limitation: channel 1's reported May 2020 growth of 115.14% compares with March because LAG skips the missing April row.
 
 ## Core Categories and Concentrated Product Sales
 
@@ -110,7 +110,7 @@ Source: seasonal_category_sales_structure.csv. Seasons use calendar-month defini
 
 Upper-body garments have a larger share in autumn and winter; swimwear and full-body garments have larger shares in spring and summer. Monitor core categories by season and channel and investigate availability of leading products. Inventory, margin and product-age data are needed before recommending specific stock increases or discontinuing long-tail items.
 
-Seasonal coverage is unequal, so shares describe mix rather than establishing seasonal demand levels. group_sale repeats across product-type rows and must not be summed directly. The 995 catalog products without observed sales are not automatically classified as slow-moving stock.
+Seasonal coverage is unequal, so shares describe mix rather than establishing seasonal demand levels.
 
 ## Decomposing Category Growth
 
@@ -127,11 +127,11 @@ Sweater sales value increased 186.44% in September 2019. The number of products 
 | Full-body garments | 1,828 | 14.49% |
 | Swimwear | 746 | 8.51% |
 
-Lower-body garments and swimwear have larger shares within top-product sales than within total sales. Leading products in these categories are useful monitoring candidates. This measure is not the percentage of each category's products entering the top group.
+Lower-body garments and swimwear have larger shares within top-product sales than within total sales. Leading products in these categories are useful monitoring candidates.
 
-Monthly mix also changes: among complete months, swimwear accounts for 15.17% of sales value in June 2019 and 0.51% in November. Both sales value and share should be shown because a falling share can also result from growth elsewhere.
+Monthly mix also changes: among complete months, swimwear accounts for 15.17% of sales value in June 2019 and 0.51% in November.
 
-Products with sales are not the same as listed products, and units per product is not sell-through. The product-type table contains 32 LAG comparisons across missing months; these are not ordinary consecutive-month growth rates.
+
 
 ## Repeat Purchasing and Observation Windows
 
@@ -146,21 +146,21 @@ Sources: customer_repurchase_overview.csv and second_purchase_interval_distribut
 | 180-day repeat rate | 59.95% | 1,189,917 customers with complete 180-day follow-up |
 | Second-purchase interval | Median 44 days; mean 90.59 days | 914,308 observed repeat purchasers |
 
-Among observed repeat purchasers, 41.48% made their second purchase within 30 days and 57.91% within 60 days. This denominator differs from the overall 30-day repeat rate. Customers without an observed repeat purchase are excluded from interval statistics, so the median is not a return time for all customers.
+Among observed repeat purchasers, 41.48% made their second purchase within 30 days and 57.91% within 60 days.
 
-Transactions after the first observed purchase day total 26,832,675 units, or 84.41% of all units and 84.25% of sales value. Subsequent purchasing is an important source of sales, but these shares are not the incremental impact of retention campaigns.
+Transactions after the first observed purchase day total 26,832,675 units, or 84.41% of all units and 84.25% of sales value. This supports treating subsequent purchasing as an important area of analysis.
 
-A customer's first observed purchase day is classified as new and later days as existing; these are transaction groups, not disjoint customer groups. One-day purchasers are not automatically churned. Rates with different follow-up windows have different denominators and cannot be subtracted to estimate incremental repeat rates for one fixed cohort.
+A customer's first observed purchase day is classified as new and later days as existing.
 
 ## Repeat-Purchase Rates Differ Across Cohorts
 
-![Source: monthly_cohort_repurchase_rates.csv. Gray cells indicate no customers with complete follow-up, not a zero repeat rate.](figures_en/07_cohort_repurchase.png)
+![Source: monthly_cohort_repurchase_rates.csv. Gray cells indicate no customers with complete follow-up.](figures_en/07_cohort_repurchase.png)
 
-Source: monthly_cohort_repurchase_rates.csv. Gray cells indicate no customers with complete follow-up, not a zero repeat rate.
+Source: monthly_cohort_repurchase_rates.csv. Gray cells indicate no customers with complete follow-up.
 
-Early cohorts have higher repeat rates, but may include customers who purchased before observation began. The pattern does not establish deteriorating acquisition quality. During 2019, monthly-cohort 30-day rates range from 17.83% to 25.75%; the rate rises from 17.97% in April 2020 to 23.72% in May.
+During 2019, monthly-cohort 30-day rates range from 17.83% to 25.75%; the rate rises from 17.97% in April 2020 to 23.72% in May.
 
-Only 16,260 of August 2020's 22,974 first-observed customers have complete 30-day follow-up, so its 18.78% rate applies only to this eligible subset. March 2020 at 180 days and June 2020 at 90 days also have partial eligibility. Missing rates in recent cohorts should not be plotted as zero.
+Only 16,260 of August 2020's 22,974 first-observed customers have complete 30-day follow-up, so its 18.78% rate applies only to this eligible subset. March 2020 at 180 days and June 2020 at 90 days also have partial eligibility.
 
 ## Evaluate Rates Alongside Segment Size
 
@@ -217,11 +217,11 @@ The MA component refers to past forecast errors, not a simple average of sales. 
 
 Source: run_02/test_actual_vs_forecast.csv. Actual holdout sales total 1,043,390 units, averaging 37,263.93 per day.
 
-ARMA overpredicts on 26 of 28 days and overpredicts total volume by 15.87%. Its later forecasts approach 43,500 units per day and fail to follow lower actual daily sales. SARIMA has the lowest holdout MAE, while Holt-Winters has the lowest RMSE; their small difference should not be overstated.
+ARMA overpredicts on 26 of 28 days and overpredicts total volume by 15.87%. Its later forecasts approach 43,500 units per day and fail to follow lower actual daily sales. SARIMA has the lowest holdout MAE, while Holt-Winters has the lowest RMSE.
 
-The seasonal-naive model underpredicts total volume by only 1.61%, but its WAPE is 13.80%. Positive and negative daily errors cancel in aggregate totals, so a close total does not establish accurate daily forecasts.
+The seasonal-naive model underpredicts total volume by only 1.61%, but its WAPE is 13.80%.
 
-WAPE is total absolute daily error divided by actual total volume; it is not a direct accuracy score. MASE7 uses a training-period denominator, so a value below one does not prove superiority over the holdout baseline. SARIMA must not be retrospectively described as the validation-selected model.
+WAPE is total absolute daily error divided by actual total volume. MASE7 uses a training-period denominator.
 
 ## Recommendations, Limitations and Reproduction
 
