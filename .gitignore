@@ -1,0 +1,17 @@
+# 原始大体积数据与图片；从数据源自行获取
+/articles.csv
+/customers.csv
+/transactions_train.csv
+/sample_submission.csv
+/images/
+
+# 本地环境、缓存与重复打包文件
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+deliverables/
+tmp/
+.matplotlib/

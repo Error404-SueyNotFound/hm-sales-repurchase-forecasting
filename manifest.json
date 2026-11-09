@@ -1,0 +1,536 @@
+{
+  "project": "H&M sales, repurchase and historical forecasting",
+  "as_of": "2026-11-09",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 271,
+      "sha256": "b3e17d7bc553b87179e7366b14e1e4139358a1b79ec254f5bdb76a799b068f27"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6837,
+      "sha256": "baea0ac9b0db9aa3934ed8ac842fb02400b78a0a1923c94a8ffc3f6f1cbafb9b"
+    },
+    {
+      "path": "code/01_data_quality.sql",
+      "bytes": 2021,
+      "sha256": "e4aff9251d40b4ef4598f4fa72d1817e9e1eb89795ac087a41ea14210f65e184"
+    },
+    {
+      "path": "code/02_sales_overview.sql",
+      "bytes": 3471,
+      "sha256": "03a0ed4db759728c223072a08c0448e9fd5ec3679da8cba277f0d3af311a05ec"
+    },
+    {
+      "path": "code/03_product_analysis.sql",
+      "bytes": 6289,
+      "sha256": "72f2347b8a785adf51b3590b88fae52ee7d96fb00e816c185cdf627429afbae8"
+    },
+    {
+      "path": "code/03_product_analysis_original.sql",
+      "bytes": 6276,
+      "sha256": "0af9645645b28b3623bbe9e84f1c5c31b275fd5391e4267ba0fcfc3943ed9b1c"
+    },
+    {
+      "path": "code/04_customer_repurchase.sql",
+      "bytes": 8703,
+      "sha256": "86b7300310d2395f47b51e71abbfb4fd88083a7da18cd0dcc81e08585dd80704"
+    },
+    {
+      "path": "code/05_forecasting_daily_sales.sql",
+      "bytes": 359,
+      "sha256": "956273377b51f3c12ace52e6ce7792cbe39a96ac14b8413174203ebdca2eb363"
+    },
+    {
+      "path": "forecasting/README.md",
+      "bytes": 4322,
+      "sha256": "2d311883640c4ce6140189150f10871914f55549aadac206515c3cc676e449e2"
+    },
+    {
+      "path": "forecasting/analyze_forecasts.py",
+      "bytes": 23507,
+      "sha256": "a335b010e38394895b187dd3880020e8b6c37d0830f907755ca033c4969c536f"
+    },
+    {
+      "path": "forecasting/backtest.py",
+      "bytes": 10767,
+      "sha256": "b4c5d0c89c5bc5c1cb101bcc44efc2c88adf4843adb63317fbde81b6471758fc"
+    },
+    {
+      "path": "forecasting/calculate_wape.py",
+      "bytes": 3810,
+      "sha256": "36cc3ef8a472cd804746059dc8661f72ffcd30bbbd6d1d62fdd8e9a93b711e11"
+    },
+    {
+      "path": "forecasting/daily_sales.csv",
+      "bytes": 12499,
+      "sha256": "0fec12e2fd0e26b3cb51ea40ba2c4d68d435afa87b0fe46f9784768decac9d40"
+    },
+    {
+      "path": "forecasting/requirements.txt",
+      "bytes": 148,
+      "sha256": "732e5b318491afbf86febbfe2e81e78adc290bc5b0d6da45da750f2341b612a9"
+    },
+    {
+      "path": "forecasting/results/run_01/backtest_scores.csv",
+      "bytes": 5480,
+      "sha256": "51b97a0fdb32d0fe8125ce4c2c831374928276e050f40d087b98a2777cf3576c"
+    },
+    {
+      "path": "forecasting/results/run_01/daily_predictions.csv",
+      "bytes": 58513,
+      "sha256": "f12e9ec6ac87bef0d9b689c36bee855d3c16ef58ddb9f68b1584eb5627906e94"
+    },
+    {
+      "path": "forecasting/results/run_01/final_test_comparison.csv",
+      "bytes": 1147,
+      "sha256": "3168ee8a14d065d9ebf59d66290dfe1cbc179f9c07ae59d1acbbd24f14179317"
+    },
+    {
+      "path": "forecasting/results/run_01/holdout_forecast.png",
+      "bytes": 146528,
+      "sha256": "1c8eff9894e1098910f633e58b037cc7b8de6fe4eaa297a3fa53d73d5a46c82b"
+    },
+    {
+      "path": "forecasting/results/run_01/model_issues.csv",
+      "bytes": 24961,
+      "sha256": "13f4dcbfafd8e18429093d433ddb03112744db5582d26cfab9502c80152d989f"
+    },
+    {
+      "path": "forecasting/results/run_01/selection.json",
+      "bytes": 424,
+      "sha256": "1ec4d48444aafe5bc615ddd7ad1b1ec9c3e5e96d4b0a20458f8e7a6e81670dca"
+    },
+    {
+      "path": "forecasting/results/run_01/validation_model_comparison.csv",
+      "bytes": 768,
+      "sha256": "63d303a469fb3f139028a3abad734e3cc4006a10f3694a1ea0ed91e6d8093467"
+    },
+    {
+      "path": "forecasting/results/run_01/wape_test.csv",
+      "bytes": 626,
+      "sha256": "9cbba595aeffe8bd9b5cb397300fea01b833baca335d83f7850a575c678c9552"
+    },
+    {
+      "path": "forecasting/results/run_01/wape_validation_folds.csv",
+      "bytes": 2907,
+      "sha256": "416ae72ad3d9539b74d65e9f5fafcb8b37a13c260e04cc290ff002a21bf56aa8"
+    },
+    {
+      "path": "forecasting/results/run_01/wape_validation_summary.csv",
+      "bytes": 384,
+      "sha256": "074512d556cd9843399d05a840e0fbb5e566104eac79dbb1de6e7b68ed033368"
+    },
+    {
+      "path": "forecasting/results/run_02/analysis_checks.json",
+      "bytes": 290,
+      "sha256": "90063284bb038f106396772787f1995f1d8695c217a37e6e1a12a45caa6e53a0"
+    },
+    {
+      "path": "forecasting/results/run_02/backtest_scores.csv",
+      "bytes": 6133,
+      "sha256": "163d6db05ce0f310746ab30dad68a8711c1c18a31af76be58eeadada01eea491"
+    },
+    {
+      "path": "forecasting/results/run_02/comparison_with_run_01.csv",
+      "bytes": 11601,
+      "sha256": "0dc075b8c8fa0a7b5f933619249d23c37ec8da38d62e89b1400f79f4e4f5f89f"
+    },
+    {
+      "path": "forecasting/results/run_02/daily_prediction_errors.csv",
+      "bytes": 105316,
+      "sha256": "10de816e520ef37e5f83c8f922aed9189c1727c174b533ad7ac651aca00e075b"
+    },
+    {
+      "path": "forecasting/results/run_02/daily_predictions.csv",
+      "bytes": 58513,
+      "sha256": "f12e9ec6ac87bef0d9b689c36bee855d3c16ef58ddb9f68b1584eb5627906e94"
+    },
+    {
+      "path": "forecasting/results/run_02/final_test_comparison.csv",
+      "bytes": 1259,
+      "sha256": "7f9da90d9cbd8fc880937f03e0d02bb2731ee4a3aaac53e80eacf18113c81610"
+    },
+    {
+      "path": "forecasting/results/run_02/history_and_evaluation_windows.png",
+      "bytes": 110357,
+      "sha256": "a471befc7da14db0dbdbb7fb9645d95dfa8f02ca75ca2f02f52e9d893562838c"
+    },
+    {
+      "path": "forecasting/results/run_02/input_daily_sales.csv",
+      "bytes": 13967,
+      "sha256": "accedae2e63e3c78305b45f2f5ba261c032ebb4025690aa2672950f351f33a3c"
+    },
+    {
+      "path": "forecasting/results/run_02/model_issues.csv",
+      "bytes": 31,
+      "sha256": "c33887b0186e051355dcbefb9a11778e29e2c5db9743045683c725d6c8c0833e"
+    },
+    {
+      "path": "forecasting/results/run_02/python_analysis_findings.md",
+      "bytes": 9846,
+      "sha256": "25efde8d256b1746111f59afe7d3b9b51202bbcf3dfcea8746c9864e50b0e667"
+    },
+    {
+      "path": "forecasting/results/run_02/run_log.txt",
+      "bytes": 4334,
+      "sha256": "4d47411b260a4d2415550cde07be9855dbdd9d89e17546c184de6b12d03cef69"
+    },
+    {
+      "path": "forecasting/results/run_02/selection.json",
+      "bytes": 558,
+      "sha256": "138d90ae131c40e5a539f7ec76b2ba4e2d093ef4ca434dc8491dfcb25dc70d99"
+    },
+    {
+      "path": "forecasting/results/run_02/test_actual_vs_forecast.csv",
+      "bytes": 3122,
+      "sha256": "4a9e7383e3f1099901f497688e52cca0df8c2dca6e144781a7621e644983a07a"
+    },
+    {
+      "path": "forecasting/results/run_02/test_actual_vs_forecast.png",
+      "bytes": 275217,
+      "sha256": "4a2817254a9ec62a9bb249238c495e8b22f1c71e7a4ade081e7d3165e4e07d12"
+    },
+    {
+      "path": "forecasting/results/run_02/test_largest_errors.csv",
+      "bytes": 1934,
+      "sha256": "152ef638b3b0e3929ddee84c9c737a2a84026a3117e1dea190ea133bdbc9f20c"
+    },
+    {
+      "path": "forecasting/results/run_02/test_model_errors.png",
+      "bytes": 59880,
+      "sha256": "e986974afb735e1c34d0d6d63cb05ff8ced5b5cffcb43e4c842d594b63a98e4d"
+    },
+    {
+      "path": "forecasting/results/run_02/test_model_totals.csv",
+      "bytes": 1301,
+      "sha256": "36eeec2996a0caab73fc712001a00b7bfaf87752f978fd4930e696b6c80ed82d"
+    },
+    {
+      "path": "forecasting/results/run_02/test_weekday_errors.csv",
+      "bytes": 3762,
+      "sha256": "70fecb7184c997f5812e97ef1294c3ece864b02452a0bccc565811387be9ea85"
+    },
+    {
+      "path": "forecasting/results/run_02/validation_baseline_comparison.png",
+      "bytes": 90008,
+      "sha256": "8cc6803154eab9d4582f91d48ecc0e010921b250b3593a64d45de490105d1647"
+    },
+    {
+      "path": "forecasting/results/run_02/validation_fold_comparison.csv",
+      "bytes": 6431,
+      "sha256": "5461736ea9059e7d8c150806a655de6cd9e3674714957346dc881adbb9529477"
+    },
+    {
+      "path": "forecasting/results/run_02/validation_model_comparison.csv",
+      "bytes": 768,
+      "sha256": "63d303a469fb3f139028a3abad734e3cc4006a10f3694a1ea0ed91e6d8093467"
+    },
+    {
+      "path": "forecasting/results/run_02/validation_stability.csv",
+      "bytes": 1053,
+      "sha256": "b7014eb4daea9db7a246714f7e3c10dc045c154cfcc849ea610ec61c9dd0b015"
+    },
+    {
+      "path": "forecasting/results/run_02/wape_test.csv",
+      "bytes": 625,
+      "sha256": "c61a884c35179e41f2188bce678e8e8806f4c0da8861884a32afb50eabae1317"
+    },
+    {
+      "path": "forecasting/results/run_02/wape_validation_folds.csv",
+      "bytes": 2906,
+      "sha256": "8b0f944b63d4915c8ac762b7042f20f99fa0ce65d8cdb0c6654f44611c615ce2"
+    },
+    {
+      "path": "forecasting/results/run_02/wape_validation_summary.csv",
+      "bytes": 355,
+      "sha256": "6ce011c5d162ac3862453c0186e39e877f9661587845cad40579fb09a49f560c"
+    },
+    {
+      "path": "forecasting/run_forecasting.py",
+      "bytes": 1498,
+      "sha256": "a02e714e994be52d56bfa5dc725d8e00cfccc7c1104c1439e16c13e0add14b2d"
+    },
+    {
+      "path": "reporting/build_charts.py",
+      "bytes": 12751,
+      "sha256": "0bab4787216d8d6ecbd2993f700654d11e3c97cb9e1eb743e229a490a48112c5"
+    },
+    {
+      "path": "reporting/build_report.py",
+      "bytes": 9171,
+      "sha256": "33de1c9c3068138ac59e7e3eecb93df23739da09100ffc91edfbf6e6b10706d2"
+    },
+    {
+      "path": "reporting/package_project.py",
+      "bytes": 8793,
+      "sha256": "56efbe694a8768b8273df5b82bddb0bdca5e7e7a063b1d14e66958476a5786a4"
+    },
+    {
+      "path": "reports/HM_Project_Report_EN.md",
+      "bytes": 19762,
+      "sha256": "e6ab03615b9ef6f8b430a75fc49bfb72024e8b1fb7fae2c69f0992ef64c77648"
+    },
+    {
+      "path": "reports/HM_Project_Report_EN.pdf",
+      "bytes": 1039941,
+      "sha256": "201aac3d217ee8a4a14de43956c121c9f46b2b41dca5ef8b29f627be8b2ccebb"
+    },
+    {
+      "path": "reports/HM_完整项目报告.md",
+      "bytes": 16120,
+      "sha256": "58541a7459aedabe42653a7fad7ee6187352b1650cf79c730bd2ef7b97dee8ef"
+    },
+    {
+      "path": "reports/HM_完整项目报告.pdf",
+      "bytes": 1360068,
+      "sha256": "8fd747e7cce8570dd859998e77a478891e8b1489c34436e96539c6bcb45b2ca4"
+    },
+    {
+      "path": "reports/figures/01_monthly_sales.png",
+      "bytes": 106097,
+      "sha256": "51df17e26f05090d910bab5a5cadb5bacb506fe60e98b5f57db625bbefd8003b"
+    },
+    {
+      "path": "reports/figures/02_channel_share.png",
+      "bytes": 53768,
+      "sha256": "560b43892ce05eec4f0d7223f633a81487bf0230f4f30e4137d128ff09161a73"
+    },
+    {
+      "path": "reports/figures/03_category_concentration.png",
+      "bytes": 95132,
+      "sha256": "c255d8b20e3336e14d9494e094c8b4ba64430daffc7a870280f24e6a7987c977"
+    },
+    {
+      "path": "reports/figures/04_seasonal_mix.png",
+      "bytes": 66453,
+      "sha256": "bafefbd4f767cf231007f75143dfff73b439658ef7121eeed5f826c3b5ed8ae2"
+    },
+    {
+      "path": "reports/figures/05_sweater_growth.png",
+      "bytes": 39136,
+      "sha256": "4e5a1859cdf8c423bca8cc3c821d06dab4b51c0b564b290987c867e50eb6c9d4"
+    },
+    {
+      "path": "reports/figures/06_repurchase_overview.png",
+      "bytes": 67765,
+      "sha256": "60394767c8b990f946ab3df06945c4e81616150f90cd60e03dc1cfe431403e43"
+    },
+    {
+      "path": "reports/figures/07_cohort_repurchase.png",
+      "bytes": 208640,
+      "sha256": "b0dc5fecbdf9ecbea94d1079f2eaecde07d99e784b529b83875a34d44462e1bd"
+    },
+    {
+      "path": "reports/figures/08_segment_repurchase.png",
+      "bytes": 71534,
+      "sha256": "fc7e9381677d81d8afe6d36b6254d058f1c0986c7f3f5ab1e8c88f296b42405a"
+    },
+    {
+      "path": "reports/figures/09_actual_vs_selected.png",
+      "bytes": 119827,
+      "sha256": "6e0f8cd23c13e12848a7926dc7178d78d1e42fc934e09c54bcc1379484fefe42"
+    },
+    {
+      "path": "reports/figures_en/01_monthly_sales.png",
+      "bytes": 103857,
+      "sha256": "41e879087955791df8eba76c34d163f1ea3350ef59a3e624d3a4318833674a75"
+    },
+    {
+      "path": "reports/figures_en/02_channel_share.png",
+      "bytes": 54266,
+      "sha256": "ae3f86cd0faaba1089d26d500924425755cd1f34a868338f0f6bebeafd0a4aa9"
+    },
+    {
+      "path": "reports/figures_en/03_category_concentration.png",
+      "bytes": 90046,
+      "sha256": "9ea31d3db13d57b4ee39a30549f77a974c3096e3b7dddf51d7290a54981bee4e"
+    },
+    {
+      "path": "reports/figures_en/04_seasonal_mix.png",
+      "bytes": 68041,
+      "sha256": "4d99b97ccc70ab470f7b6b22043731c96f9dcecba1d3f78de8bb6bcd3de7bf30"
+    },
+    {
+      "path": "reports/figures_en/05_sweater_growth.png",
+      "bytes": 32839,
+      "sha256": "9a145d0007f1baabe2c6ea5f530b7861f0cd4871cc4113c359ec5ed7a10fc78c"
+    },
+    {
+      "path": "reports/figures_en/06_repurchase_overview.png",
+      "bytes": 72266,
+      "sha256": "84d9d91049690bfe7155825c3e56bdfaf92d6f90ea296a58167cb0b1eb2dc41e"
+    },
+    {
+      "path": "reports/figures_en/07_cohort_repurchase.png",
+      "bytes": 213343,
+      "sha256": "941cbfc2e477165956148b3ddb60bffe2d2fecd73fc0b9f7d56f03f637d23dc8"
+    },
+    {
+      "path": "reports/figures_en/08_segment_repurchase.png",
+      "bytes": 76102,
+      "sha256": "70478d6ec820aa9ea57412ba4baa7c1c16acbbd2d6aa1856fdeb5f1145648bfb"
+    },
+    {
+      "path": "reports/figures_en/09_actual_vs_selected.png",
+      "bytes": 113438,
+      "sha256": "76c471a42e582d1c8a1bbfb5851bd9b18bd823d105ad32fab8f3b7a65bc01507"
+    },
+    {
+      "path": "reports/python_analysis_findings.md",
+      "bytes": 9966,
+      "sha256": "de70ef6071b2d100f927a30acfeca39dfa1566af0681123cacf25424d542d2a0"
+    },
+    {
+      "path": "reports/report_structure.json",
+      "bytes": 24678,
+      "sha256": "642f66230e643b5371a4e0e07793f3a0a0f85a97964ec520ffedb307c17a054f"
+    },
+    {
+      "path": "reports/report_structure_en.json",
+      "bytes": 28144,
+      "sha256": "c3accaede4451445a7bbde39e60eccfeabbaaf4def1d364725bb097367f8459f"
+    },
+    {
+      "path": "reports/sql_analysis_findings.md",
+      "bytes": 18864,
+      "sha256": "2b436b087a12c27c8ead15546b60809acc96fe3eab50ba541501dccab1df99a0"
+    },
+    {
+      "path": "reports/简历与面试准备.md",
+      "bytes": 5632,
+      "sha256": "bfca73407b7bfa7ad5ce93cc1edf5add57ecf4da82e65e1e2885e9e84bafff9c"
+    },
+    {
+      "path": "reports/结果文件索引.md",
+      "bytes": 13392,
+      "sha256": "17a49184167b6f79a27815e29d63c29c77fc1b0a9cd0c5598eaef7910405bd68"
+    },
+    {
+      "path": "results/data_quality/dq_01_id_uniqueness.csv",
+      "bytes": 110,
+      "sha256": "955aee6d8234eb1b98df26f18e230600a0984948e6e5593fa6ecc556abbc13ca"
+    },
+    {
+      "path": "results/data_quality/dq_02_empty_ids.csv",
+      "bytes": 44,
+      "sha256": "e187163fdd079fcea46e731be46131126a9d7da2170aa70ac5df730f1530b82b"
+    },
+    {
+      "path": "results/data_quality/dq_03_reference_integrity.csv",
+      "bytes": 71,
+      "sha256": "5e8af8638847741dfc8c25f35f3022a489691d71afa53b81001f8e01086b984d"
+    },
+    {
+      "path": "results/data_quality/dq_05_age.csv",
+      "bytes": 67,
+      "sha256": "742a70503b03246c9ea781d58552bce226575d2704b3f5ae06636834de8d46d1"
+    },
+    {
+      "path": "results/data_quality/dq_06_date_coverage.csv",
+      "bytes": 88,
+      "sha256": "9616696b81431555b5002b56de979adbb4d6033c9482f51b2a933b1fe007a88c"
+    },
+    {
+      "path": "results/data_quality/dq_07_sales_channels.csv",
+      "bytes": 91,
+      "sha256": "36599acae6cbead84f329a180d42d238b7d276b745a92096ab2716ba5eac254d"
+    },
+    {
+      "path": "results/product_analysis/README.md",
+      "bytes": 3106,
+      "sha256": "a3cc585a62b57da832b846688e7c957d8348485c4c5480cc287bf2ee058e1519"
+    },
+    {
+      "path": "results/product_analysis/category_sales_structure.csv",
+      "bytes": 11799,
+      "sha256": "52ca8451c8f95003cc2ddfd8f80f8c065ef5929ee9c9c463a4b37080e55d02f9"
+    },
+    {
+      "path": "results/product_analysis/channel_category_sales_structure.csv",
+      "bytes": 20170,
+      "sha256": "3d390846e9e3d03b4fd5f626d93580764b308f637a1fa3c598807136905e6b4c"
+    },
+    {
+      "path": "results/product_analysis/monthly_category_sales_structure.csv",
+      "bytes": 346870,
+      "sha256": "2d812337d61d0c1bca990c374289bc6736037a985cf6485275055b4598da7f96"
+    },
+    {
+      "path": "results/product_analysis/monthly_product_type_performance.csv",
+      "bytes": 265829,
+      "sha256": "2eb2a7883eb72c48888a15e445f70e5004bf544ebbbf4d98ac3e53436278ea7d"
+    },
+    {
+      "path": "results/product_analysis/product_sales_concentration.csv",
+      "bytes": 422,
+      "sha256": "c1f8ef88ec1544e5d504294be55e5365779d9c700a357d672416dd0703a0cce4"
+    },
+    {
+      "path": "results/product_analysis/seasonal_category_sales_structure.csv",
+      "bytes": 40783,
+      "sha256": "ae0ad4de60cc2b1fb595185968d8a6ff9da9d274d7b6b8b2969fb418dc9a4ab2"
+    },
+    {
+      "path": "results/product_analysis/top_decile_product_category_mix.csv",
+      "bytes": 505,
+      "sha256": "82394d08d0ca5c0828d90641fb9137c88a95b3260fa52ab4888a1565830564e6"
+    },
+    {
+      "path": "results/repurchase_analysis/age_group_30d_repurchase.csv",
+      "bytes": 216,
+      "sha256": "e10c00938e09593474d173614515a666de012e28a184256025bcbfe6a5f47a3f"
+    },
+    {
+      "path": "results/repurchase_analysis/customer_repurchase_overview.csv",
+      "bytes": 81,
+      "sha256": "2223bc39f1a45780a3aab75089a9fdf660eab0de8588fa04c71c821e09029dc4"
+    },
+    {
+      "path": "results/repurchase_analysis/customer_repurchase_rates.csv",
+      "bytes": 182,
+      "sha256": "1ed74078266f2380d1c878a8597be8f4b3d8638dc6956c1d03108d373be644e4"
+    },
+    {
+      "path": "results/repurchase_analysis/first_category_30d_repurchase.csv",
+      "bytes": 577,
+      "sha256": "51929194b96a83cd641c1c79a473875632bfa9e4d222e2b9301bfd70154f4aa8"
+    },
+    {
+      "path": "results/repurchase_analysis/first_channel_30d_repurchase.csv",
+      "bytes": 117,
+      "sha256": "5049bfefe010689dbe38c3fb3af91e53804778b8e088ce7d294df7ea6a603246"
+    },
+    {
+      "path": "results/repurchase_analysis/monthly_channel_performance.csv",
+      "bytes": 5070,
+      "sha256": "2e904c58f045329305f505dbcf63fe97c483a63ad6e3d7a1db53666bd01a9e0c"
+    },
+    {
+      "path": "results/repurchase_analysis/monthly_cohort_repurchase_rates.csv",
+      "bytes": 1366,
+      "sha256": "7d78a7655b47e955c69ad094ec1bbc3cdc7e01ffd6f429a232e6670f1fc703cc"
+    },
+    {
+      "path": "results/repurchase_analysis/monthly_overall_performance.csv",
+      "bytes": 2464,
+      "sha256": "2e6ec43e3fe59f842c26b9cba5f943eb5fb947e59ef250b7604bdbcb123b4e31"
+    },
+    {
+      "path": "results/repurchase_analysis/new_returning_customer_contribution.csv",
+      "bytes": 137,
+      "sha256": "905767b1042e1299415242ab5959ea1f28c9badfff8daa4fbaf500dec7e36b43"
+    },
+    {
+      "path": "results/repurchase_analysis/second_purchase_interval_distribution.csv",
+      "bytes": 248,
+      "sha256": "e53bc8992a6524710e6c58628629fd964f413b0f20a680dd7a3369d2306f0032"
+    },
+    {
+      "path": "results/repurchase_analysis/second_purchase_interval_summary.csv",
+      "bytes": 50,
+      "sha256": "a23bfd98ef554da16d7e7870c7398214a3a9e6b597ec546f0d402251e3e07861"
+    }
+  ]
+}
